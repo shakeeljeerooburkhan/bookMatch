@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil - Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Style spécifique pour cette page d'accueil */
+    body {
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url("img/ecran-accueil.png"); /* Ton image d'accueil */
+      background-size: 60%;
+      /*background-size: cover;*/
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-bottom: 15vh;
+    }
+
+    .btn-start {
+      background-color: #00f0ff; /* Cyan fluo */
+      color: #000000;
+      font-family: 'VT323', monospace;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 15px 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 6px 6px 0px #ff00ff; /* Ombre rose */
+      text-decoration: none; /* Pour le lien */
+      transition: all 0.2s ease;
+    }
+
+    .btn-start:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0px #ff00ff;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="btn-start">COMMENCER</a>
+
+</body>
+</html>

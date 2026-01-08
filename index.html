@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Match - Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<div aria-live="polite" class="sr-only" id="live-region"></div>
+
+<section class="screen is-active" data-step="1">
+  <div class="screen__inner">
+    
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <h1 class="title-quiz">QUELLE SÉRIE PRÉFÈRES-TU REGARDER APRÈS UNE LONGUE JOURNÉE ?</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid">
+        
+        <div class="choice choice-card neon-cyan" data-type="C" data-label="Black Mirror">
+          <div class="img-container"><img src="img/r1.png" alt="Black Mirror"></div>
+          <div class="label-box">BLACK MIRROR</div>
+        </div>
+
+        <div class="choice choice-card neon-yellow" data-type="D" data-label="Suits">
+          <div class="img-container"><img src="img/r2.png" alt="Suits"></div>
+          <div class="label-box">SUITS</div>
+        </div>
+
+        <div class="choice choice-card neon-pink" data-type="B" data-label="Emily in Paris">
+          <div class="img-container"><img src="img/r3.png" alt="Emily in Paris"></div>
+          <div class="label-box">EMILY IN PARIS</div>
+        </div>
+
+        <div class="choice choice-card neon-orange" data-type="E" data-label="You">
+          <div class="img-container"><img src="img/r4.png" alt="You"></div>
+          <div class="label-box">YOU</div>
+        </div>
+
+        <div class="choice choice-card neon-blue" data-type="A" data-label="Our Planet">
+          <div class="img-container"><img src="img/r5.png" alt="Our Planet"></div>
+          <div class="label-box">OUR PLANET</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2 → GREEN -->
+<section class="screen screen--green" data-step="2" aria-hidden="true">
+  <!-- <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+    
+    <h1 class="title">Quel type de livre t’attire le plus ?</h1>
+      
+    <div class="choices">
+      <div class="choice choice-card neon-cyan" data-label="Choix A2" data-type="A">
+        <div class="choice__title">Un livre sur la société ou la philosophie 🧭</div>
+      </div>
+      <div class="choice" data-label="Choix B2" data-type="B">
+        <div class="choice__title">Un roman captivant rempli d’émotions 🎭</div>
+      </div>
+      <div class="choice" data-label="Choix C2" data-type="C">
+        <div class="choice__title">Un guide pratique ou un ouvrage scientifique 🔬</div>
+      </div>
+      <div class="choice" data-label="Choix D2" data-type="D">
+        <div class="choice__title">Un thriller d'enquête</div>
+      </div>
+      <div class="choice" data-label="Choix E2" data-type="E">
+        <div class="choice__title">Un livre de développement personnel</div>
+      </div>
+    </div>
+      
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div> -->
+  <section class="screen" data-step="2">
+  <div class="screen__inner">
+    
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="exit-icon">
+        <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+    </div>
+
+    <h1 class="title-quiz">QUEL TYPE DE LIVRE T’ATTIRE LE PLUS ?</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid grid-3-2">
+        
+        <div class="choice choice-card choice-card--text neon-cyan" data-type="A" data-label="Société">
+          <div class="label-box">UN LIVRE SUR LA SOCIÉTÉ ET LE MONDE</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-yellow" data-type="B" data-label="Roman">
+          <div class="label-box">UN ROMAN CAPTIVANT</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-pink" data-type="C" data-label="Scientifique">
+          <div class="label-box">UN OUVRAGE SCIENTIFIQUE</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-orange" data-type="D" data-label="Thriller">
+          <div class="label-box">UN THRILLER D'ENQUETE</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-blue" data-type="E" data-label="Développement">
+          <div class="label-box">UN LIVRE SUR DÉVELOPPEMENT PERSONNEL</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<!-- STEP 3 → RED -->
+<!--<section class="screen screen--red" data-step="3" aria-hidden="true">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <div>
+      <div class="kicker">Étape 3 sur 7</div>
+      <h1 class="title">Si tu devais passer un après-midi parfait, tu…</h1>
+      <p class="subtitle">Choisis une option</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" data-label="Choix A3" data-type="A">
+        <div class="choice__title">sortirais dehors avec tes amis</div>
+        <div class="choice__desc">Description 3A</div>
+      </div>
+      <div class="choice" data-label="Choix B3" data-type="C">
+        <div class="choice__title">le passerais devant une série</div>
+        <div class="choice__desc">Description 3B</div>
+      </div>
+      <div class="choice" data-label="Choix C3" data-type="B">
+        <div class="choice__title">iriais faire du shopping</div>
+        <div class="choice__desc">Description 3C</div>
+      </div>
+      <div class="choice" data-label="Choix D3" data-type="E">
+        <div class="choice__title">irais te balader tout seul</div>
+        <div class="choice__desc">Description 3B</div>
+      </div>
+      <div class="choice" data-label="Choix E3" data-type="D">
+        <div class="choice__title">iriais faire du sport</div>
+        <div class="choice__desc">Description 3C</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>-->
+<section class="screen" data-step="3">
+  <div class="screen__inner">
+    
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="exit-icon">
+        <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+    </div>
+
+    <h1 class="title-quiz">QUELLE AMBIANCE TE PARLE LE PLUS ?</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid grid-3-2">
+        
+        <div class="choice choice-card neon-cyan" data-type="A" data-label="Futuriste">
+          <div class="img-container"><img src="img/r3-1.png" alt="Futuriste"></div>
+        </div>
+
+        <div class="choice choice-card neon-yellow" data-type="B" data-label="Nature">
+          <div class="img-container"><img src="img/r3-2.png" alt="Nature"></div>
+        </div>
+
+        <div class="choice choice-card neon-pink" data-type="C" data-label="Urbain">
+          <div class="img-container"><img src="img/r3-3.png" alt="Urbain"></div>
+        </div>
+
+        <div class="choice choice-card neon-orange" data-type="D" data-label="Mystique">
+          <div class="img-container"><img src="img/r3-4.png" alt="Mystique"></div>
+        </div>
+
+        <div class="choice choice-card neon-blue" data-type="E" data-label="Vintage">
+          <div class="img-container"><img src="img/r3-5.png" alt="Vintage"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+
+<!-- STEP 4 → BLUE -->
+<!--<section class="screen screen--blue" data-step="4" aria-hidden="true">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <div>
+      <div class="kicker">Étape 4 sur 7</div>
+      <h1 class="title">Tes vacacances idéales ?</h1>
+      <p class="subtitle">Choisis une option</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" data-label="Choix A4" data-type="A">
+        <div class="choice__title">Voyager et découvrir des cultures</div>
+        <div class="choice__desc">Description 4A</div>
+      </div>
+      <div class="choice" data-label="Choix B4" data-type="B">
+        <div class="choice__title">Festivals, concerts et activités créatives</div>
+        <div class="choice__desc">Description 4B</div>
+      </div>
+      <div class="choice" data-label="Choix C4" data-type="C">
+        <div class="choice__title">Tester de nouvelles choses</div>
+        <div class="choice__desc">Description 4C</div>
+      </div>
+      <div class="choice" data-label="Choix D4" data-type="D">
+        <div class="choice__title">Partir en voyage humanitaire</div>
+        <div class="choice__desc">Description 4B</div>
+      </div>
+      <div class="choice" data-label="Choix E4" data-type="E">
+        <div class="choice__title">TVacances chill et détente</div>
+        <div class="choice__desc">Description 4C</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>-->
+<section class="screen" data-step="4">
+  <div class="screen__inner">
+    
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="exit-icon">
+        <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+    </div>
+
+    <h1 class="title-quiz">TES VACANCES IDÉALES ?</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid">
+        
+        <div class="choice choice-card neon-cyan" data-type="A" data-label="VOYAGER">
+          <div class="img-container"><img src="img/r4-1.png" alt="Burger"></div>
+          <div class="label-box">VOYAGER ET DÉCOUVRIR DES CULTURES</div>
+        </div>
+
+        <div class="choice choice-card neon-yellow" data-type="B" data-label="Sain & Frais">
+          <div class="img-container"><img src="img/r4-2.png" alt="CONCERTS"></div>
+          <div class="label-box">FESTIVALS ET CONCERTS</div>
+        </div>
+
+        <div class="choice choice-card neon-pink" data-type="C" data-label="Gastronomique">
+          <div class="img-container"><img src="img/r4-3.png" alt="Gastronomique"></div>
+          <div class="label-box">TESTER DE NOUVELLES CHOSES</div>
+        </div>
+
+        <div class="choice choice-card neon-orange" data-type="D" data-label="Exotique">
+          <div class="img-container"><img src="img/r4-4.png" alt="HUMANITAIRE"></div>
+          <div class="label-box">PARTIR EN VOYAGE HUMANITAIRE</div>
+        </div>
+
+        <div class="choice choice-card neon-blue" data-type="E" data-label="Traditionnel">
+          <div class="img-container"><img src="img/r4-5.png" alt="VACANCES"></div>
+          <div class="label-box">VACANCES CHILL ET DÉTENTE</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5 → GREEN -->
+<!--<section class="screen screen--green" data-step="5" aria-hidden="true">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <div>
+      <div class="kicker">Étape 5 sur 7</div>
+      <h1 class="title">Ton mode d’apprentissage préféré ?</h1>
+      <p class="subtitle">Choisis une option</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" data-label="Choix A5" data-type="A">
+        <div class="choice__title">Discuter et échanger avec d’autres</div>
+        <div class="choice__desc">Description 5A</div>
+      </div>
+      <div class="choice" data-label="Choix B5" data-type="B">
+        <div class="choice__title">Apprendre en écoutant ou en visualisant (vidéos, podcasts, expos)</div>
+        <div class="choice__desc">Description 5B</div>
+      </div>
+      <div class="choice" data-label="Choix C5" data-type="C">
+        <div class="choice__title">Faire des schémas et expérimenter par toi-même</div>
+        <div class="choice__desc">Description 5C</div>
+      </div>
+      <div class="choice" data-label="Choix D5" data-type="D">
+        <div class="choice__title">Lire des textes arguementés et débattre</div>
+        <div class="choice__desc">Description 5B</div>
+      </div>
+      <div class="choice" data-label="Choix E5" data-type="E">
+        <div class="choice__title">Observer, analyser, réfléchir seul</div>
+        <div class="choice__desc">Description 5C</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>-->
+<section class="screen" data-step="5">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 71%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <h1 class="title-quiz">TON MODE D’APPRENTISSAGE PRÉFÉRÉ ?</h1>
+
+    <div class="choices-container-vertical">
+      <div class="choices-list-vertical">
+        
+        <div class="choice list-item neon-cyan" data-type="A" data-label="Discuter">
+          <div class="item-content">
+            <span class="item-title">Discuter et échanger avec d’autres</span>
+            <span class="item-desc">Partager des idées pour mieux comprendre</span>
+          </div>
+        </div>
+
+        <div class="choice list-item neon-yellow" data-type="B" data-label="Écouter">
+          <div class="item-content">
+            <span class="item-title">Écouter ou visualiser</span>
+            <span class="item-desc">Vidéos, podcasts ou démonstrations</span>
+          </div>
+        </div>
+
+        <div class="choice list-item neon-pink" data-type="C" data-label="Expérimenter">
+          <div class="item-content">
+            <span class="item-title">Faire des schémas et expérimenter</span>
+            <span class="item-desc">Apprendre par la pratique et l'action</span>
+          </div>
+        </div>
+
+        <div class="choice list-item neon-orange" data-type="D" data-label="Lire">
+          <div class="item-content">
+            <span class="item-title">Lire des textes et débattre</span>
+            <span class="item-desc">Analyse approfondie et argumentation</span>
+          </div>
+        </div>
+
+        <div class="choice list-item neon-blue" data-type="E" data-label="Analyser">
+          <div class="item-content">
+            <span class="item-title">Observer et réfléchir seul</span>
+            <span class="item-desc">Analyse calme et concentration individuelle</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+
+<!-- STEP 6 → RED -->
+<!--<section class="screen screen--red" data-step="6" aria-hidden="true">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <div>
+      <div class="kicker">Étape 6 sur 7</div>
+      <h1 class="title">Ton rapport aux réseaux sociaux, c’est plutôt…</h1>
+      <p class="subtitle">Choisis une option</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" data-label="Choix B6" data-type="B">
+        <div class="choice__title">Un outil pour t’exprimer et créer.</div>
+        <div class="choice__desc">Description 6A</div>
+      </div>
+      <div class="choice" data-label="Choix A6" data-type="A">
+        <div class="choice__title">Un moyen de comprendre les autres et la société.</div>
+        <div class="choice__desc">Description 6B</div>
+      </div>
+      <div class="choice" data-label="Choix C6" data-type="C">
+        <div class="choice__title">Un terrain d’analyse et de données fascinant.</div>
+        <div class="choice__desc">Description 6C</div>
+      </div>
+      <div class="choice" data-label="Choix D6" data-type="D">
+        <div class="choice__title">Un enjeu sur la vie privée</div>
+        <div class="choice__desc">Description 6B</div>
+      </div>
+      <div class="choice" data-label="Choix E6" data-type="E">
+        <div class="choice__title">Un mirroir des émotions</div>
+        <div class="choice__desc">Description 6C</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>-->
+<section class="screen" data-step="6">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 85%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <h1 class="title-quiz">TON RAPPORT AUX RÉSEAUX SOCIAUX, C’EST PLUTÔT…</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid grid-3-2">
+        
+        <div class="choice choice-card choice-card--text neon-cyan" data-type="B" data-label="Créer">
+          <div class="label-box">UN ENJEU SUR LA VIE PRIVÉE</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-yellow" data-type="A" data-label="Comprendre">
+          <div class="label-box">COMPRENDRE LES AUTRES</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-pink" data-type="C" data-label="Analyse">
+          <div class="label-box">ANALYSER</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-orange" data-type="D" data-label="Vie privée">
+          <div class="label-box">T'EXPRIMER ET CRÉER</div>
+        </div>
+
+        <div class="choice choice-card choice-card--text neon-blue" data-type="E" data-label="Émotions">
+          <div class="label-box">UN MIROIR DES ÉMOTIONS</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+
+<!-- STEP 7 → BLUE -->
+<!--<section class="screen screen--blue" data-step="7" aria-hidden="true">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 15%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <div>
+      <div class="kicker">Étape 7 sur 7</div>
+      <h1 class="title">Quel citation te parle plus ?</h1>
+      <p class="subtitle">Choisis une option</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" data-label="Choix B7" data-type="B">
+        <div class="choice__title">"Créer c'est façonner sa propre identité."</div>
+        <div class="choice__desc">Description 7A</div>
+      </div>
+      <div class="choice" data-label="Choix E7" data-type="E">
+        <div class="choice__title">"Ton identité n’est pas figée : elle se construit chaque fois que tu choisis d’être vrai."</div>
+        <div class="choice__desc">Description 7B</div>
+      </div>
+      <div class="choice" data-label="Choix C7" data-type="C">
+        <div class="choice__title">"Dans un monde numérique, protéger son identité devient un acte de liberté."</div>
+        <div class="choice__desc">Description 7C</div>
+      </div>
+      <div class="choice" data-label="Choix D7" data-type="D">
+        <div class="choice__title">"La justice, c’est reconnaître la dignité et l’identité de chacun."</div>
+        <div class="choice__desc">Description 7B</div>
+      </div>
+      <div class="choice" data-label="Choix A7" data-type="A">
+        <div class="choice__title">"Nos identités se tissent dans les liens que nous créons avec les autres"</div>
+        <div class="choice__desc">Description 7C</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>-->
+<section class="screen" data-step="7">
+  <div class="screen__inner">
+
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 100%;"></div>
+      </div>
+      <div class="exit-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></div>
+    </div>
+
+    <h1 class="title-quiz">QUELLE CITATION TE PARLE LE PLUS ?</h1>
+
+    <div class="choices-container-bottom">
+      <div class="choices-grid grid-2-1-2">
+        
+        <div class="choice choice-card neon-cyan" data-type="B" data-label="Créer">
+          <div class="label-box">"CRÉER C'EST FAÇONNER SA PROPRE IDENTITÉ"</div>
+        </div>
+
+        <div class="choice choice-card neon-yellow" data-type="E" data-label="Vrai">
+          <div class="label-box">"TON IDENTITÉ N’EST PAS FIGÉE : ELLE SE CONSTRUIT CHAQUE FOIS QUE TU CHOISIS D’ÊTRE VRAI"</div>
+        </div>
+
+        <div class="choice choice-card neon-pink center-quote" data-type="C" data-label="Liberté">
+          <div class="label-box">"DANS UN MONDE NUMÉRIQUE, PROTÉGER SON IDENTITÉ DEVIENT UN ACTE DE LIBERTÉ"</div>
+        </div>
+
+        <div class="choice choice-card neon-orange" data-type="D" data-label="Justice">
+          <div class="label-box">"LA JUSTICE, C’EST RECONNAÎTRE LA DIGNITÉ ET L’IDENTITÉ DE CHACUN"</div>
+        </div>
+
+        <div class="choice choice-card neon-blue" data-type="A" data-label="Liens">
+          <div class="label-box">"NOS IDENTITÉS SE TISSENT DANS LES LIENS QUE NOUS CRÉONS AVEC LES AUTRES"</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-button">
+      <i class="fa-sharp fa-solid fa-left-long"></i>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL SCREEN -->
+<!--<section class="screen" id="final-screen" aria-hidden="true">
+  <div class="screen__inner">
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+    </div>
+
+    <div class="summary" id="summary"></div>
+    <div class="actions">
+    </div>
+  </div>
+</section>-->
+<section class="screen" id="final-screen" aria-hidden="true">
+  <div class="screen__inner">
+    <div class="quiz-header">
+      <img src="img/logo-book-match.png" alt="Logo" class="header-logo">
+    </div>
+
+    <div class="result-container">
+      
+      <div class="result-column-left">
+      <!-- classe js-->
+        <div class="summary" id="summary"></div>
+          
+          <br><br><br>
+
+          <a href="" class="btn-keep">GARDE TES RECOMMENDATIONS</a>
+          
+          <br><br><br><br><br><br><br><br><br><br><br>
+          
+          <a href="accueil.html" class="btn-keep">Quittez</a>
+      </div>
+
+      <div class="result-column-right">
+        <div class="placeholder-content">
+          <!-- classe js-->
+          <div class="carousel-container">
+            <div class="carousel-inner">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div> </div>
+</section>
+
+
+</body>
+</html>

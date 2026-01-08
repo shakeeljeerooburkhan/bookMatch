@@ -1,0 +1,510 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: 'VT323', monospace;
+  text-align: center;
+  color: #ffffff;
+  background-image: url("../img/fond1.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* --- Layout du Quiz --- */
+.screen {
+  min-height: 100vh;
+  display: none;
+  padding: 20px;
+  background: transparent !important;
+}
+
+.screen.is-active { display: flex; flex-direction: column; }
+
+.screen__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* --- Header & Logo --- */
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.exit-icon {
+  font-size: 1.5rem; /* Taille de l'icône */
+  color: #fff;    /* Couleur cyan néon */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.exit-icon:hover {
+  transform: scale(1.1);
+  color: #ff00ff;    /* Change en rose au survol */
+}
+
+.progress-container {
+  flex-grow: 1;
+  margin: 0 30px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00f0ff;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+}
+
+/* --- Titre --- */
+.title-quiz {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* --- Aligner les choix en bas --- */
+.choices-container-bottom {
+  margin-top: 10%; /* Pousse vers le bas */
+  padding-bottom: 40px;
+}
+
+.choices-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+/* --- Grille 3 + 2 pour la Question 2 --- */
+.grid-3-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 700px; /* Force le passage à la ligne après 3 éléments */
+  margin: 0 auto;
+}
+
+/* Style spécifique pour les cartes de texte (sans image) */
+.choice-card--text {
+  width: 200px !important; /* On l'élargit un peu car il n'y a pas d'image */
+  flex: 0 0 auto;
+}
+
+.choice-card--text .label-box {
+  border: 2px solid !important; /* On remet la bordure partout car pas d'img au dessus */
+  border-radius: 8px;           /* Coins arrondis pour le style bouton */
+  padding: 20px 10px;           /* Plus d'espace pour le texte */
+  font-size: 1.2rem;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Effet au survol spécifique au texte */
+.choice-card--text:hover .label-box {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+/* On s'assure que la Question 1 (sans .grid-3-2) ne change pas */
+.choices-grid:not(.grid-3-2) {
+  flex-wrap: nowrap;
+}
+
+/* --- Cartes Images --- */
+.choice-card {
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 170px;
+  transition: transform 0.2s ease;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.choice-card:hover {
+  transform: translateY(-10px);
+}
+
+.img-container {
+  border: 2px solid;
+  border-radius: 5px 5px 0 0;
+  height: 220px;
+  overflow: hidden;
+  background: #000;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.label-box {
+  border: 2px solid;
+  border-top: none;
+  padding: 8px 2px;
+  font-size: 1rem;
+  background: black;
+  font-weight: bold;
+}
+
+
+
+/*question 5*/
+/* --- Style Liste Verticale Question 5 --- */
+.choices-container-vertical {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.choices-list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espace entre les lignes */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left; /* Aligne le texte à gauche comme sur l'image */
+}
+
+.list-item:hover {
+  transform: translateX(10px); /* Petit décalage vers la droite au survol */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.item-desc {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Réutilisation de tes couleurs néon pour la bordure et le texte du titre */
+.list-item.neon-cyan { border-color: #00f0ff; }
+.list-item.neon-cyan .item-title { color: #00f0ff; }
+
+.list-item.neon-yellow { border-color: #ffcc00; }
+.list-item.neon-yellow .item-title { color: #ffcc00; }
+
+.list-item.neon-pink { border-color: #ff00ff; }
+.list-item.neon-pink .item-title { color: #ff00ff; }
+
+.list-item.neon-orange { border-color: #ff6600; }
+.list-item.neon-orange .item-title { color: #ff6600; }
+
+.list-item.neon-blue { border-color: #0066ff; }
+.list-item.neon-blue .item-title { color: #0066ff; }
+
+
+/*last question*/
+/* --- Layout Spécifique 2-1-2 --- */
+.grid-2-1-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* La 3ème carte prend toute la largeur au milieu */
+.grid-2-1-2 .choice:nth-child(3) {
+  grid-column: span 2; 
+  justify-self: center;
+  width: 100%;
+  max-width: 600px; /* Un peu plus large pour la citation du milieu */
+}
+
+/* Style des boites de texte pour les citations */
+.grid-2-1-2 .label-box {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid !important; /* On ferme la bordure haute */
+  border-radius: 10px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/* Animation au survol */
+.grid-2-1-2 .choice:hover {
+  transform: scale(1.03);
+}
+
+
+/* --- Couleurs Néon --- */
+.neon-cyan .img-container, .neon-cyan .label-box { border-color: #00f0ff; color: #00f0ff; box-shadow: 0 0 10px rgba(0,240,255,0.3); }
+.neon-yellow .img-container, .neon-yellow .label-box { border-color: #ffcc00; color: #ffcc00; box-shadow: 0 0 10px rgba(255,204,0,0.3); }
+.neon-pink .img-container, .neon-pink .label-box { border-color: #ff00ff; color: #ff00ff; box-shadow: 0 0 10px rgba(255,0,255,0.3); }
+.neon-orange .img-container, .neon-orange .label-box { border-color: #ff6600; color: #ff6600; box-shadow: 0 0 10px rgba(255,102,0,0.3); }
+.neon-blue .img-container, .neon-blue .label-box { border-color: #0033ff; color: #0033ff; box-shadow: 0 0 10px rgba(0,51,255,0.3); }
+
+/* --- Divers --- */
+.back-button {
+  text-align: left;
+  font-size: 2rem;      /* Taille de l'icône */
+  color: #fff;       /* Cyan néon */
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  width: fit-content;   /* Pour que seule l'icône soit cliquable */
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  color: #ff00ff;       /* Change en rose au survol */
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+
+
+
+
+
+
+/*last question*/
+/* Cible uniquement les cartes de la question 7 */
+/* --- Ajustement de l'alignement Question 7 --- */
+
+/* On définit la largeur fixe des cartes pour l'étape 7 */
+[data-step="7"] .choice-card {
+  width: 320px !important; 
+  margin: 0 auto;
+}
+
+/* La grille avec 2 colonnes de 320px + l'espace (gap) */
+[data-step="7"] .grid-2-1-2 {
+  display: grid;
+  grid-template-columns: 320px 320px; 
+  gap: 20px;
+  justify-content: center; /* Centre la grille dans l'écran */
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+/* La 3ème citation (celle du milieu) */
+[data-step="7"] .grid-2-1-2 .choice:nth-child(3) {
+  grid-column: span 2; /* Elle prend les deux colonnes */
+  /* Sa largeur totale sera : 320px + 320px + 20px de gap = 660px */
+  width: 660px !important; 
+  max-width: 660px !important;
+  justify-self: center;
+}
+
+/* On s'assure que la box à l'intérieur prend bien toute la place */
+[data-step="7"] .grid-2-1-2 .choice:nth-child(3) .label-box {
+  width: 100% !important;
+  border: 2px solid !important; /* Pour bien fermer le cadre */
+}
+
+
+
+/*resultat*/
+.result-profile {
+  color: #00f0ff;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  letter-spacing: 2px;
+  text-transform: uppercase; /* Optionnel, mais aide souvent l'effet néon */
+  
+  /* On simplifie l'ombre pour un effet léger */
+  text-shadow: 
+    0 0 4px rgba(255, 255, 255, 0.4), /* Très légère brillance sur les lettres */
+    0 0 12px rgba(0, 240, 255, 0.5),  /* Halo principal doux et semi-transparent */
+    1px 1px 3px rgba(0, 0, 0, 0.8);  /* Ombre portée discrète pour détacher du fond */
+}
+
+/* Conteneur principal du résultat */
+.result-container {
+  display: flex;
+  flex-direction: row; /* Aligne les colonnes côte à côte */
+  justify-content: space-between;
+  align-items: flex-start; /* Aligne le contenu en haut */
+  gap: 40px; /* Espace entre les deux colonnes */
+  width: 100%;
+  margin-top: 30px;
+  flex-grow: 1; /* Prend l'espace restant */
+}
+
+/* Colonne GAUCHE */
+.result-column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre les textes et boutons verticalement */
+  align-items: flex-start; /* Aligne tout à gauche */
+  gap: 20px;               /* Espace automatique entre le profil et les boutons */
+}
+
+/* Colonne DROITE */
+.result-column-right {
+  flex: 1; /* Prend l'50% de la largeur par défaut */
+  width: 100%;
+  min-height: 300px; /* Taille minimum pour voir la div au début */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style optionnel pour le summary à gauche (puisque le parent a changé) */
+.summary {
+  width: 100%;
+  margin: 0;
+}
+
+.btn-keep {
+  background-color: #00f0ff; /* Cyan fluo */
+  color: #000000;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 15px 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px #ff00ff; /* Ombre rose */
+  text-decoration: none; /* Pour le lien */
+  transition: all 0.2s ease;
+}
+
+.btn-keep:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0px #ff00ff;
+  background-color: #ffffff;
+}
+
+/* Conteneur du carrousel */
+.carousel-container {
+  width: 100%;
+  max-width: 400px; /* Ajuste la largeur selon tes besoins */
+  height: 500px;    /* Ajuste la hauteur */
+  margin: 0 auto;
+  border: 2px solid #00f0ff; /* Bordure néon cyan */
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  
+  margin-top: 40px;    /* Augmente l'espace au-dessus */
+  margin-bottom: 40px; /* Augmente l'espace en-dessous */
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  position: absolute; /* Superpose les images */
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+  /*object-fit: cover;*/
+  /*opacity: 0;*/ /* Cache tout par défaut */
+  transition: opacity 0.5s ease-in-out; /* Effet de transition fluide */
+}
+
+.carousel-img.active {
+  opacity: 1; /* Affiche uniquement l'image active */
+  z-index: 10;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Le bandeau d'infos en bas de l'image */
+.book-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85); /* Fond noir transparent */
+  padding: 15px;
+  border-top: 2px solid #00f0ff;
+  text-align: left;
+}
+
+.book-title {
+  color: #00f0ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+.book-author {
+  color: #ffffff;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.book-location {
+  color: #ff00ff; /* Rose néon pour l'emplacement */
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-weight: bold;
+}
